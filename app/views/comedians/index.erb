@@ -1,0 +1,10 @@
+<%= @comedians.average_age %>
+<% @comedians.each do |comedian| %>
+<a href="/comedians/<%= comedian.id %>"><h2><%= comedian.name %>
+<%= comedian.age %>
+ <%= comedian.specials_count %>
+<ul><% comedian.specials.each do |special| %>
+  <li><%= special.name %></li>
+
+<% end %>
+<% end %>
